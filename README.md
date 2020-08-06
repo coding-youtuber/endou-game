@@ -1,6 +1,6 @@
-![capture](https://user-images.githubusercontent.com/58985013/89116158-dda13280-d4cb-11ea-9d8e-65471ddcef3c.jpg)
+![capture](https://user-images.githubusercontent.com/58985013/89532748-3dca0880-d82d-11ea-9ea5-67305a41bf9b.jpg)
 
-https://youtu.be/v23Z6g1yRI4
+https://youtu.be/TbIv8inJcAI
 
 ### 環境準備
 
@@ -10,7 +10,6 @@ https://youtu.be/v23Z6g1yRI4
   npm i
   npm start
 ```
-
 
 ### サーバ起動
 
