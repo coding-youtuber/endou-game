@@ -5,7 +5,7 @@ https://youtu.be/TbIv8inJcAI
 ### 環境準備
 
 ```
-  git clone git@github.com:coding-youtuber/running-game.git my_project
+  git clone git@github.com:coding-youtuber/endou-game.git my_project
   cd my_project
   npm i
   npm start
