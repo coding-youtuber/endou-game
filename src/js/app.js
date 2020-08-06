@@ -1,7 +1,7 @@
 require('../css/app.css');
 require('../scss/style.scss');
 
-import { init, Sprite, SpriteSheet, GameLoop, initKeys, keyPressed } from "kontra";
+import { init, Sprite, SpriteSheet, GameLoop, initKeys, keyPressed, setImagePath, load, imageAssets } from "kontra";
 
 let { canvas } = init();
 initKeys();
@@ -65,23 +65,25 @@ let ground = Sprite({
   height: 50
 });
 
-let image = new Image();
-image.src = "images/character_walk_sheet.png";
+setImagePath("images");
 
-image.onload = function() {
+// let image = new Image();
+// image.src = "images/face-sp.png";
+// image.src = "images/character_walk_sheet.png";
 
+load("endou.png", "face.png", "jump.png").then(function() {
   let spriteSheet = SpriteSheet({
-    image: image,
-    frameWidth: 72,
-    frameHeight: 97,
+    image: imageAssets.endou,
+    frameWidth: 100,
+    frameHeight: 100,
     animations: {
       walk: {
-        frames: "0..9",
+        frames: "0..8",
         frameRate: 30
       },
       jump: {
-        frames: 1,
-        frameRate: 1,
+        frames: "9..13",
+        frameRate: 30,
       }
     }
   });
@@ -152,7 +154,7 @@ image.onload = function() {
   });
   
   loop.start();
-};
+});
 
 document.addEventListener("keyup", function(k) {
   if(isOver && k.code == "Enter") {
